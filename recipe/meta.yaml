@@ -1,5 +1,5 @@
 {% set name = "presidio_evaluator" %}
-{% set version = "0.2.3" %}
+{% set version = "0.22" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/microsoft/presidio-research/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 5261d5ed3f6614271d1333629697e78c3d3101dc0354561b2b3e5f3311f46344
+  sha256: f6af71b4d2c89b3ef68c31c000695ec809d62cea70f6fe88d1d453b984ebba1b
 
 build:
   noarch: python
@@ -43,7 +43,7 @@ test:
     - presidio_evaluator
   requires:
     - python {{ python_min }}
-    - pip 
+    - pip
   commands:
     - pip list
     - pip check
